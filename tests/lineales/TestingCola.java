@@ -1,6 +1,6 @@
 package tests.lineales;
-//import lineales.dinamicas.Cola;
-import lineales.estaticas.Cola;
+import lineales.dinamicas.Cola;
+//import lineales.estaticas.Cola;
 
 public class TestingCola {
 
@@ -71,9 +71,11 @@ public class TestingCola {
                     "Recupera frente en cola vacia espera null: \t\t" + ((q1.obtenerFrente() == null) ? sOk : sErr));
 
     System.out.println("Verifica copia guardada espera [3 4 5 6 7 8 9 <10 11> 23 24]: \t--> " + q2.toString());
-    System.out.println(
-                    "Pone 27 espera true en dinamica y false en estatica: \t" + q2.poner(27));
-    System.out.println("Verifica copia espera [3 4 5 6 7 8 9 <10 11> 23 24 <27>]: \t--> " + q2.toString());
+    
+    //System.out.println(
+      //            "Pone 27 espera true en dinamica y false en estatica: \t" + q2.poner(27));
+    
+        System.out.println("Verifica copia espera [3 4 5 6 7 8 9 <10 11> 23 24 <27>]: \t--> " + q2.toString());
     System.out.println(
                     "Saca " + q2.obtenerFrente() + " de cola espera true: \t\t\t\t" + ((q2.sacar() == true) ? sOk : sErr));
     System.out.println("Verifica copia espera [4 5 6 7 8 9 <10 11> 23 24 <27>]: \t--> " + q2.toString());

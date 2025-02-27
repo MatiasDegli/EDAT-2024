@@ -60,11 +60,11 @@ public class GrafoEtiquetado {
     }
     
     
-    public boolean eliminarVertice(Object vertice){        
+    public boolean eliminarVertice(Object vertice){
         NodoVert buscado = ubicarVertice(vertice);
         
         if(buscado!=null){
-            eliminarAux(inicio, inicio, buscado);
+            eliminarAux(inicio, inicio, buscado); 
         }
         
         return buscado!=null;
