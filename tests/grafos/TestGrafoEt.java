@@ -12,51 +12,42 @@ import lineales.dinamicas.Lista;
  * @author matia
  */
 public class TestGrafoEt {
-    
+
     public static void main(String[] args) {
-        
+
         GrafoEtiquetado g = new GrafoEtiquetado();
-        
+
         g.insertarVertice("A");
         g.insertarVertice("B");
         g.insertarVertice("D");
-        g.insertarVertice("C");        
-        g.insertarVertice("E");        
-        System.out.println(g.toString());     
-        
-        
-        g.eliminarVertice("E");        
+        g.insertarVertice("C");
+        g.insertarVertice("E");
+        g.insertarVertice("F");
+        g.insertarVertice("G");
+
+        g.insertarArco("A", "B", 1);
+        g.insertarArco("B", "C", 2);
+        g.insertarArco("C", "F", 3);
+        g.insertarArco("A", "D", 7);
+        g.insertarArco("A", "E", 6);
+        g.insertarArco("E", "F", 6);
+        g.insertarArco("D", "F", 9);
+        g.insertarArco("A", "G", 1);
+        g.insertarArco("G", "F", 2);
+
+        System.out.println(g.toString());
+
+        System.out.println("\n -------------------------------- \n");
+
+        g.eliminarVertice("G");
+
         System.out.println(g.toString());
         
-        
-        g.insertarArco("A", "B", "12");
-        g.insertarArco("A", "C", "5");        
-        g.insertarArco("C", "D", "3");
-        //g.insertarArco("D", "B", "7");
-        //g.insertarArco("D", "A", "10");
-        g.insertarArco("B", "C", "1");        
-        System.out.println(g.toString());
-        
-        
-        g.eliminarArco("B", "C");
-        System.out.println(g.toString());
-        
-        
-        g.insertarArco("B", "C", "8");
-        System.out.println(g.toString());                
-        
-        System.out.println("Existe un camino de A a D en el grafo? "+g.existeCamino("A", "D"));
-        
-        Lista corto = g.caminoMasCorto("A", "D");
-        System.out.println("Camino mas corto de B a D: "+corto.toString());
-        
-        Lista largo = g.caminoMasLargo("A", "D");
-        System.out.println("Camino mas largo de B a D: "+largo.toString());
-        
-        
-        GrafoEtiquetado clon = g.clone();
-        System.out.println("El clon del grafo es: "+clon.toString());
-        
+        //System.out.println(g.primerCaminoMenorPeso("A", "F", 15, 4).toString());
+
+        //System.out.println(g.primerCaminoMenorPesoLong("A", "F", 15, 5).toString());
+
+        //System.out.println(g.primerCaminoPesoEntre("A", "F", 10, 13).toString());
     }
-    
+
 }
