@@ -19,18 +19,18 @@ public class TestAVL {
         
         a.insertar(10);        
         a.insertar(5);
-        a.insertar(15);
+        a.insertar(4);
         a.insertar(12);
         a.insertar(17);
-        a.insertar(4);
-        a.insertar(13);
-        //a.insertar(20);
-        a.insertar(14);
+        a.insertar(7);
+        a.insertar(3);
+        a.insertar(20);
+        //a.insertar(14);
         
         
         System.out.println(a.toString());
         
-        a.eliminar(10);
+        a.eliminar(5);
 
         System.out.println("\n -------------------------------- \n");
 
